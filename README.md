@@ -4,7 +4,7 @@
 
 ## 翻译文件在哪？
 
-[这里](Document/trans.md)，目前没有翻译完
+[这里](Document/Trans.md)，目前没有翻译完
 - [x] 19
   - [x] 19.1
   - [x] 19.2
