@@ -17,11 +17,11 @@
 [mrkdown参考](https://markdown.com.cn)<br>
 [基本语法](https://markdown.com.cn/basic-syntax/)<br>
 其中，数学公式使用LateX书写，单行公式使用`$$`包裹，内嵌公式使用`$`包裹，具体可参考已翻译部分<br>
-特殊符号参考：[原图](img)<br>
-![pic1](img/1.png)
-![pic2](img/2.png)
-![pic3](img/3.png)
-![pic4](img/4.png)
+特殊符号参考：[原网页](https://blog.csdn.net/yen_csdn/article/details/79966985)<br>
+![pic1](https://img-blog.csdn.net/2018041621294865?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1lFTl9DU0RO/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![pic2](https://img-blog.csdn.net/20180416213036844?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1lFTl9DU0RO/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![pic3](https://img-blog.csdn.net/20180416213119987?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1lFTl9DU0RO/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![pic4](https://img-blog.csdn.net/20180416213126857?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1lFTl9DU0RO/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 ## github是什么？
 
