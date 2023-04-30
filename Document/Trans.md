@@ -153,3 +153,48 @@ $$U_{i,j}=\frac{1}{4}[U_{i+1,j}+U_{i-1,j}+U_{i,j+1}+U_{i,j-1}]+\pi\rho(i\Delta,j
 
 
 其中ω是放大或减少残差的参数。ω=1时得到非加速松弛算法（19.32），ω≥1时得到加速收敛（过松弛），ω<1时得到欠松弛。1≤ω≤2的值通常工作良好，但ω>2可能导致数值不稳定性。尽管需要对算法进行详细分析来预测ω的最佳值，但我们建议您探索ω的不同值，看看哪一个最适合您的特定问题。
+
+## 19.4.2 拉普拉斯偏微分方程的实现
+
+在清单19.1中，我们给出了解决方线问题的代码LaplaceLine.py（图19.1）。在这里，我们通过设置框的长度L=NmaxΔ=100和取Δ=1来保持代码的简单性：
+
+
+
+我们运行算法（10.19）进行固定的1000次迭代。一个更好的代码会改变Δ和维度，一旦解决方案收敛到一定的公差，就会停止迭代。研究、编译和执行基本代码。
+
+**清单19.1 LaplaceLine.py** 通过松弛来求解拉普拉斯方程。应调整各种参数以获得准确的解决方案。
+
+```python
+# LaplaceLine.py: Solve Laplace's eqtn, 3D matplot, close shell to quit
+
+import matplotlib.pylab as p
+from mpl_toolkits.mplot3d import Axes3D
+from numpy import *
+import numpy
+
+print("Initializing")
+Nmax = 100; Niter = 70; V = zeros((Nmax, Nmax), float)
+print("Working hard, wait for the figure while I count to 60")
+for k in range(0, Nmax−1): V[k, 0] = 100.0 # Line at 100V
+
+for iter in range(Niter): 
+    if iter%10 == 0: print(iter)
+    for i in range(1, Nmax−2):
+        for j in range(1 ,Nmax−2) :
+            V[i, j] = 0.25*(V[i+1, j]+V[i−1, j]+V[i, j+1]+V[i, j−1])
+x = range(0, Nmax−1, 2); y = range(0 ,50 , 2)
+X, Y = p.meshgrid(x, y)
+
+def functz (V): # V(x, y) 
+    z = V[X,Y] 
+    return z
+
+Z = functz(V)
+fig = p.figure() # Create figure 
+ax = Axes3D(fig) # Plot axes 
+ax.plot_wireframe(X, Y, Z, color = 'r') # Red wireframe 
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Potential')
+p.show() # Show fig
+```
